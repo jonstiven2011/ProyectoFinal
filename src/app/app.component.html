@@ -1,50 +1,258 @@
-  <!-- Navbar goes here -->
 <nav>
-  <div class="nav-wrapper">
-    <a href="" class="brand-logo">Logo</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">          
-      <li>
-          <a  (click)="listarCursos()"
-              class="waves-effect waves-light btn">
-              Ver los cursos existentes
-          </a>
-      </li>
+  <div class="nav-wrapper #42a5f5 blue lighten-1">
+    <a href="" class="brand-logo ">Prestamos de pruebas Psicologicass</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="">Manual</a></li>
+      <li><a href="">Protocolo</a></li>
+      <li><a href="">Datos normativos</a></li>
     </ul>
   </div>
 </nav>
 
-  <!-- Page Layout here -->
+<div align="center">
+  <h1 class="titulo ">Test Psicologico</h1>
+  <img src="assets/imagenes/test.jpg" width="200" height="200"/>
+  <br>
+</div>                                                  
+ 
   <div class="row">
+      <div class="col s12" align="center"><h3 class="titulo">¿Qué es un test psicologico?</h3></div><br><br><br>
 
-    <div class="col s12 m4 l2" style="margin-top:20px;"> <!-- Note that "m4 l3" was added -->
-          <div class="chip">
-            <img src="data:image/jpeg;base64,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" alt="Contact Person">
-            Profesor Jose
-          </div>
-    </div>
+      <div class="col s6 #e3f2fd blue lighten-5">
+      <p class="texto ">
+      Un test psicológico o prueba psicológica es un instrumento experimental que
+      tiene por objeto medir o evaluar una característica psicológica específica,
+      o los rasgos generales de la personalidad de un individuo. Como justificación
+      teórica de la validez de una medición mediante el uso de test psicológicos,
+      se argumenta que el comportamiento individual que los reactivos de la prueba
+      provoca puede ser valorado en comparación estadística o cualitativa con el de
+      otros individuos sometidos a la misma situación experimental, con lo que se da
+      lugar a una determinada clasificación del sujeto. La construcción del test
+      debe procurar que el comportamiento específico ante determinado reactivo
+      represente lo más fielmente posible el funcionamiento del sujeto en situaciones
+      cotidianas donde se pone en ejecución real la capacidad que el test pretende evaluar.<br><br>
+      CLASIFICACION DE LAS PRUEBAS PSICOLOGICAS:<br>
+      Test de inteligencia.<br>
+      Test de aptitudes.<br>
+      Test de personalidad. Estas tienen:<br>
+      -Pruebas objetivas.<br>
+      -Pruebas proyectivas.
 
-    <div class="col s12 m8 l10"> <!-- Note that "m8 l9" was added -->
-      <disc-crear-curso>
-      </disc-crear-curso>
-    </div>
 
+      </p>
+      </div>
+      <br>
+      <h4 class="test">Video: Test de personalidad</h4>
+      <div class="col s6"><video src="assets/imagenes/test.mp4" controls></video></div>
   </div>
 
 
-<div id="modal_listado_cursos" class="modal bottom-sheet open" style="z-index: 1003; display: block; opacity: 1; bottom: 0px; visibility:hidden;">
-          <div class="modal-content">
-            <h4>Listado de cursos</h4>
-            <ul class="collection">
-              <li *ngFor="let curso of cursosList"
-                  class="collection-item avatar">
-                <i class="material-icons circle green">assessment</i>
-                <span class="title">{{curso.nombre}}</span>
-                <p>{{curso.codigo}} <br>
-                   {{curso.creditos}} créditos
-                </p>
-                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <div class="row">
+    
+      <div class="col s6"><h4 class="titulo">Ingrese su prestamo</h4></div>
+      <div class="col s6"><h4 class="titulo">Tipos de ramas de los arboles</h4></div><br>
 
+    <div class="col s6 #e3f2fd blue lighten-5">
+
+          <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="Ingrese su Nombre" id="nombre" type="text" class="validate">
+                <label for="nombre" class="varios">Nombre</label>
+              </div>
+              <div class="input-field col s6">
+                <input placeholder="Ingrese su Apellido" id="apellido" type="text" class="validate">
+                <label for="apellido" class="varios">Apellido</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="cedula" type="text" class="validate">
+                <label for="cedula" class="varios">Cedula</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="correo" type="text" class="validate">
+                <label for="correo" class="varios">Correo electronico</label>
+              </div>
+            </div>
+            <label class="select">Naturaleza o tipo de persona:</label>
+              <select class="browser-default" id="naturaleza">
+                <option value="" disabled selected>Seleccione una naturaleza</option>
+                <option value="1">Psicologo</option>
+                <option value="2">Docente</option>
+                <option value="3">Estudiante</option>
+                <option value="3">Otros</option>
+              </select>
+              <br><br>
+              <span class="radio">Seleccione una prueba</span>
+              <p>
+                <input name="prueba" type="radio" id="test1" />
+                <label for="test1">Rastreo cognitivo</label>
+              </p>
+              <p>
+                <input name="prueba" type="radio" id="test2" />
+                <label for="test2">Test especifico</label>
+              </p>
+              <p>
+                <input class="with-gap" name="prueba" type="radio" id="test3"  />
+                <label for="test3">Baterias completas</label>
+              </p>
+              <br>
+              <div class="row">
+              <div class="input-field col s12">
+                <input id="valor" type="text" class="validate">
+                <label for="valor" class="varios">$.Valor de prueba</label>
+              </div>
+            </div>
+               <button class="btn waves-effect waves-light" type="submit" name="action">
+                  <i class="material-icons right">aceptar</i>
+              </button>
+          </form>
+        </div>
+    </div>
+
+
+    <div class="col s6 #e3f2fd blue lighten-5">
+          <table>
+          <thead>
+            <tr>
+                <th data-field="id">Nombre</th>
+                <th data-field="name">Significado</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Ramas de un solo trazo</td>
+              <td>personalidad afable, calida</td>
+            </tr>
+
+            <tr>
+              <td>Ramas de 2 trazos</td>
+              <td>Buena discriminacion de la realidad</td>
+            </tr>
+
+            <tr>
+              <td>Ramas tridimensionales</td>
+              <td>Deseos de destacarse, originalidad</td>
+            </tr>
+
+          </tbody>
+         </table>
+    </div>           
+</div>
+
+
+ <table>
+        <thead>
+          <tr>
+              <th data-field="id"></th>
+              <th data-field="name"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class="#e3f2fd blue lighten-5">
+            <td><div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="assets/imagenes/emociones.jpg" width="100" height="300">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4"><p class="#b2dfdb teal lighten-4">Test de Inteligencia Emocional</p></span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Test de Inteligencia Emocional<i class="material-icons right"></i></span>
+                  <p>Se trata de un test complementario al de CI y que permite obtener nuestro índice de Inteligencia Emocional.<br>
+                  A diferencia de la inteligencia "convencional", el término Inteligencia Emocional (IE) se refiere a la capacidad 
+                  humana de sentir, entender, controlar y modificar estados emocionales en uno mismo y en los demás. No se basa en 
+                  la capacidad de resolver problemas si no en como respondemos y afrontamos ante nuestras relaciones sociales.</p>
+                </div>
+              </div>
+
+              <br><br>
+              <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="assets/imagenes/dependencia.jpg" width="100" height="300">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4"><p class="#f0f4c3 lime lighten-3">Test de dependencia emocional</p></span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Test de dependencia emocional<i class="material-icons right"></i></span>
+                  <p>La dependencia emocional es un patrón de necesidades emocionales insatisfechas desde la niñez que,
+                    ahora de mayores, buscamos satisfacer mediante la búsqueda de relaciones interpersonales muy estrechas.<br>
+                    Ahora puedes averiguar con este test si eres o no un verdadero dependiente emocional.</p>
+                </div>
+              </div>
+            </td>
+
+            <td><div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="assets/imagenes/personalidad.jpg" width="100" height="300">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4"><p class="#ffcdd2 red lighten-4">Test de personalidad y compatibilidad de pareja</p></span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Test de personalidad y compatibilidad de pareja<i class="material-icons right"></i></span>
+                  <p>Este test debe ser contestado por ambos miembros de la pareja. Permite descubrir
+                    la personalidad dominante de cada uno y te muestra el grado de compatibilidad entre ambos.<br>
+                    También es posible realizarlo de forma individual en cuyo caso se comporta como un test de personalidad.</p>
+                </div>
+              </div>
+
+              <br><br>
+              <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="assets/imagenes/autoestima.jpg" width="100" height="300">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4"><p class="#ffe0b2 orange lighten-4">Test de autoestima</p></span>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Test de autoestima<i class="material-icons right"></i></span>
+                  <p>La autoestima es la valoración que hacemos sobre nosotros mismos respondiendo a las preguntas
+                    ¿cómo soy yo?, ¿cómo me veo a mi mismo?. Es una autovaloración que incluye la visión personal
+                    que tenemos sobre nuestro carácter, nuestra personalidad y también nuestras características físicas.<br>
+                  Dependiendo de cómo nos valoremos a nosotros mismos obtendremos el éxito o el fracaso en nuestras empresas personales.</p>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+  
+
+ <footer class="page-footer #42a5f5 blue lighten-1">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Electiva II. Proyecto Final</h5>
+                <p class="grey-text text-lighten-4">Trabajo hecho con Visual Studio Code, Angular-2 y Materialize.
+                  Codigo fuente subido a GitHub<br>
+                  Pagina subida a la red con 000Webhost
+                </p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Descargar</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="https://code.visualstudio.com/download">Visual Studio Code</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://angularjs.org/">Angular</a></li>
+                  <li><a class="grey-text text-lighten-3" href="http://materializecss.com/">Materialize</a></li>
+                  <h5 class="white-text">Ir a:</h5>
+                  <li><a class="grey-text text-lighten-3" href="https://github.com">GitHub</a></li>
+                  <li><a class="grey-text text-lighten-3" href="http://000webhost.com/">000Webhost</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            Trabajo realizado por: Johnnathan Stiven Navarro, Tecnologo en Informatica. Universidad de Manizales
+            </div>
+          </div>
+</footer>
