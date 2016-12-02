@@ -1,4 +1,4 @@
-export class Curso
+export class profinal
 {
     id:number;
     nombre:string;

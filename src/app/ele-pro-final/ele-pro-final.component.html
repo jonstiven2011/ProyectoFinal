@@ -1,19 +1,4 @@
-<nav>
-  <div class="nav-wrapper #42a5f5 blue lighten-1">
-    <a href="" class="brand-logo ">Prestamos de pruebas Psicologicass</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="">Manual</a></li>
-      <li><a href="">Protocolo</a></li>
-      <li><a href="">Datos normativos</a></li>
-    </ul>
-  </div>
-</nav>
-
-<div align="center">
-  <h1 class="titulo ">Test Psicologico</h1>
-  <img src="assets/imagenes/test.jpg" width="200" height="200"/>
-  <br>
-</div>                                                  
+                                               
  
   <div class="row">
       <div class="col s12" align="center"><h3 class="titulo">¿Qué es un test psicologico?</h3></div><br><br><br>
@@ -54,30 +39,35 @@
 
     <div class="col s6 #e3f2fd blue lighten-5">
 
-          <div class="row">
-          <form class="col s12">
+      <div class="row">
+        <form class="col s12" #formprofinal="ngForm" novalidate>
+
             <div class="row">
               <div class="input-field col s6">
                 <input placeholder="Ingrese su Nombre" id="nombre" type="text" class="validate">
                 <label for="nombre" class="varios">Nombre</label>
               </div>
+
               <div class="input-field col s6">
                 <input placeholder="Ingrese su Apellido" id="apellido" type="text" class="validate">
                 <label for="apellido" class="varios">Apellido</label>
               </div>
             </div>
+
             <div class="row">
               <div class="input-field col s12">
                 <input id="cedula" type="text" class="validate">
                 <label for="cedula" class="varios">Cedula</label>
               </div>
             </div>
+
             <div class="row">
               <div class="input-field col s12">
                 <input id="correo" type="text" class="validate">
                 <label for="correo" class="varios">Correo electronico</label>
               </div>
             </div>
+
             <label class="select">Naturaleza o tipo de persona:</label>
               <select class="browser-default" id="naturaleza">
                 <option value="" disabled selected>Seleccione una naturaleza</option>
@@ -87,6 +77,7 @@
                 <option value="3">Otros</option>
               </select>
               <br><br>
+              
               <span class="radio">Seleccione una prueba</span>
               <p>
                 <input name="prueba" type="radio" id="test1" />
