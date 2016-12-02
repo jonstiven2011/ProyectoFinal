@@ -5,13 +5,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { EleProFinalComponent } from './ele-pro-final/ele-pro-final.component';
-import { ProfinModelComponent } from './profin-model/profin-model.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EleProFinalComponent,
-    ProfinModelComponent
+    EleProFinalComponent
   ],
   imports: [
     BrowserModule,
