@@ -44,61 +44,143 @@
 
             <div class="row">
               <div class="input-field col s6">
-                <input placeholder="Ingrese su Nombre" id="nombre" type="text" class="validate">
-                <label for="nombre" class="varios">Nombre</label>
+                <input placeholder="Ingrese su Nombre" 
+                id="nombre" 
+                type="text" 
+                class="validate"
+                [class.invalid]="!nombreTxt.valid"
+                name="nombre"
+                #nombreTxt="ngModel"
+                [(ngModel)]="prestamoACrear.nombre"
+                required>
+
+                <label for="nombre"
+                data-error="El nombre es requerido"
+                data-success="aceptado" 
+                class="varios">Nombre
+                </label>
               </div>
+
 
               <div class="input-field col s6">
-                <input placeholder="Ingrese su Apellido" id="apellido" type="text" class="validate">
-                <label for="apellido" class="varios">Apellido</label>
+                <input placeholder="Ingrese su Apellido" 
+                id="apellido" 
+                type="text" 
+                class="validate"
+                [class.invalid]="!apellidoTxt.valid"
+                name="apellido"
+                #apellidoTxt="ngModel"
+                [(ngModel)]="prestamoACrear.apellido"
+                required>
+
+                <label for="apellido" 
+                data-error="El apellido es requerido"
+                data-success="aceptado"
+                class="varios">Apellido
+                </label>
               </div>
             </div>
 
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="cedula" type="text" class="validate">
-                <label for="cedula" class="varios">Cedula</label>
-              </div>
-            </div>
 
             <div class="row">
               <div class="input-field col s12">
-                <input id="correo" type="text" class="validate">
-                <label for="correo" class="varios">Correo electronico</label>
+                <input id="cedula" 
+                type="text" 
+                class="validate"
+                [class.invalid]="!cedulaTxt.valid"
+                name="cedula"
+                #cedulaTxt="ngModel"
+                [(ngModel)]="prestamoACrear.cedula"
+                required>
+                
+                <label for="cedula"
+                data-error="El cedula es requerida"
+                data-success="aceptado" 
+                class="varios">Cedula
+                </label>
               </div>
             </div>
+
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="correo" 
+                type="text" 
+                class="validate"
+                [class.invalid]="!correoTxt.valid"
+                name="correo"
+                #correoTxt="ngModel"
+                [(ngModel)]="prestamoACrear.correo"
+                required>
+
+                <label for="correo"
+                data-error="El correo es requerido"
+                data-success="aceptado"  
+                class="varios">Correo electronico
+                </label>
+              </div>
+            </div>
+
 
             <label class="select">Naturaleza o tipo de persona:</label>
-              <select class="browser-default" id="naturaleza">
+              <select class="browser-default" 
+                id="naturaleza"
+                [class.invalid]="!naturalezaTxt.valid"
+                name="naturaleza"
+                #naturalezaTxt="ngModel"
+                [(ngModel)]="prestamoACrear.naturaleza"
+                required>
+
                 <option value="" disabled selected>Seleccione una naturaleza</option>
-                <option value="1">Psicologo</option>
-                <option value="2">Docente</option>
-                <option value="3">Estudiante</option>
-                <option value="3">Otros</option>
+                <option value="Psicologo">Psicologo</option>
+                <option value="Docente">Docente</option>
+                <option value="Estudiante3">Estudiante</option>
+                <option value="Otros">Otros</option>
               </select>
               <br><br>
               
               <span class="radio">Seleccione una prueba</span>
               <p>
-                <input name="prueba" type="radio" id="test1" />
+                <input name="prueba" 
+                type="radio" id="test1" />
                 <label for="test1">Rastreo cognitivo</label>
               </p>
+
               <p>
                 <input name="prueba" type="radio" id="test2" />
                 <label for="test2">Test especifico</label>
               </p>
+              
               <p>
                 <input class="with-gap" name="prueba" type="radio" id="test3"  />
                 <label for="test3">Baterias completas</label>
               </p>
               <br>
+
               <div class="row">
               <div class="input-field col s12">
-                <input id="valor" type="text" class="validate">
-                <label for="valor" class="varios">$.Valor de prueba</label>
+                <input id="valor" 
+                type="text" 
+                class="validate"
+                [class.invalid]="!valorTxt.valid"
+                name="valor"
+                #valorTxt="ngModel"
+                [(ngModel)]="prestamoACrear.valor"
+                required>
+
+                <label for="valor" 
+                data-error="El valor es requerido"
+                data-success="aceptado"
+                class="varios">$.Valor de prueba
+                </label>
               </div>
             </div>
-               <button class="btn waves-effect waves-light" type="submit" name="action">
+
+               <button class="btn waves-effect waves-light" 
+               type="submit" 
+               name="action"
+               [disabled]="!formprofinal.valid"
+                (click)="guardarPrestamo()">
                   <i class="material-icons right">aceptar</i>
               </button>
           </form>
