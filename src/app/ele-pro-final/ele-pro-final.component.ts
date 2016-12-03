@@ -9,10 +9,33 @@ import { profinal } from '../model/final.model';
   styleUrls: ['./ele-pro-final.component.css']
 })
 export class EleProFinalComponent implements OnInit {
+  
+  private prestamoACrear:profinal;
 
-  constructor() { }
+  constructor(private http:Http) {
+    this.prestamoACrear = new profinal();
+   }
 
   ngOnInit() {
+  }
+
+
+  public guardarPrestamo()
+  {
+    this.http.post(
+      "http://stiven-web2.net16.net/Electiva2ProFinal/test.php",
+      this.prestamoACrear
+    ).subscribe((response)=>{
+      let respuesta = response.json();
+      if(respuesta.resultado == 1){
+        alert('Prestamo guardado con éxito');
+      }      
+      else{
+        alert("Hubo un error al guardar el prestamo");
+      }
+    });
+
+      
   }
 
 }
