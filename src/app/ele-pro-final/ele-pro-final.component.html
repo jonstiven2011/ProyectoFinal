@@ -122,7 +122,7 @@
             </div>
             <br>
 
-            <label class="select">Naturaleza o tipo de persona:</label>
+            <span>Naturaleza o tipo de persona:</span>
               <select class="browser-default" 
                 id="naturaleza"
                 [class.invalid]="!naturalezaTxt.valid"
@@ -184,8 +184,8 @@
                type="submit" 
                name="action"
                [disabled]="!formprofinal.valid"
-                (click)="guardarPrestamo()">
-                  <i class="material-icons right">aceptar</i>
+                (click)="guardarPrestamo()">Aceptar
+                  <i class="material-icons right">send</i>
               </button>
           </form>
         </div>
@@ -217,16 +217,22 @@
               <td>Deseos de destacarse, originalidad</td>
             </tr>
             
-            <ul class="collapsible" data-collapsible="accordion">
-              <li>
-                <div class="collapsible-header #64b5f6 blue lighten-2"><i class="material-icons">search</i>Busqueda</div>
-                <div class="collapsible-body">
-                  <p>
-                    Texto de prueba para esta etiqueta
-                  </p>
-                </div>
-              </li>
-            </ul>
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="assets/imagenes/psicologia.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Mostrar todo </span>
+                <p><a >Nombre</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Mostrar todo<i class="material-icons right">close</i></span>
+                <p>Esto es un campo de prueba para ver si muestra todo lo que esta en la base de datos
+                  incluyendo el id y lo demas
+                </p>
+              </div>
+            </div>
+         
 
           </tbody>
          </table>
