@@ -1,22 +1,172 @@
-<nav>
-  <div class="nav-wrapper #42a5f5 blue lighten-1">
-    <a href="" class="brand-logo ">Prestamos de pruebas Psicologicas</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="">Manual</a></li>
-      <li>Perfil:</li>
-      <li>
+
+ <nav class="nav-extended">
+    <div class="nav-wrapper  #42a5f5 blue lighten-1">
+      <a href="#" class="brand-logo">Prestamos de pruebas Psicologicas</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#!">Manual</a></li>
+        <li>Perfil:</li>
+         <li>
       <a href="">
         <div class="chip">
           <img src="assets/imagenes/psicologia.jpg" alt="Contact Person">
-          A. Camilo D.
+          J. Stiven. N
         </div>
       </a>
       </li>
-    </ul>
+      </ul>
+
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a href="#test1">Busqueda por Nombre</a></li>
+        <li class="tab"><a href="#test">Busqueda por Cedula</a></li>
+        <li class="tab"><a href="#test3">Busqueda por Naturaleza</a></li>
+        <li class="tab"><a href="#test4">Listar todo</a></li>
+        <li class="tab"><a class="active" href="#test2">No Mostrar</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="test1" class="col s12">
+    <ul class="collapsible #c5cae9 indigo lighten-4" data-collapsible="expandable" >
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="busqueda" 
+                    type="text" 
+                    name="busqueda"
+                    #valorTxt="ngModel"
+                    [(ngModel)]="busqueda"
+                    required>
+
+                    <label for="busqueda" class="varios">Escribe el nombre
+                    </label>
+                  </div>
+                </div>
+
+                <li (click)="listarPruebas()">
+                  <div id="listarP" class="collapsible-header #c5cae9 indigo lighten-4"><i class="material-icons">perm_identity</i>
+                    Buscar nombre
+                    
+                    <ul class="collection">
+                      <li *ngFor="let final of pruebasNombre">
+                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                        <h4>Nombre: {{final.nombre}} Apellido: {{final.apellido}}</h4>
+                        <p>Cedula: {{final.cedula}}<br>
+                           Correo: {{final.correo}}<br>
+                           Naturaleza: {{final.naturaleza}}<br>
+                           Prueba: {{final.prueba}}<br>
+                           Valor: ${{final.valor}}<br>
+                        </p>
+                      </li>   
+                    </ul>  
+                    
+                  </div>
+                </li>
+          </ul>  
   </div>
-</nav>
 
 
+  <div id="test" class="col s12">
+    <ul class="collapsible #bbdefb blue lighten-4" data-collapsible="expandable" >
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="busqueda1" 
+                    type="text" 
+                    name="busqueda1"
+                    #valorTxt="ngModel"
+                    [(ngModel)]="busqueda1"
+                    required>
+
+                    <label for="busqueda1" class="varios">Escribe el numero de cedula
+                    </label>
+                  </div>
+                </div>
+
+                <li (click)="listarCedula()">
+                  <div id="listarC" class="collapsible-header #bbdefb blue lighten-4"><i class="material-icons">credit_card</i>
+                    Buscar cedula
+                    
+                    <ul class="collection">
+                      <li *ngFor="let final of pruebasCedula">
+                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                        <h4>Cedula: {{final.cedula}}</h4>
+                        <p>Nombre completo: {{final.nombre}} {{final.apellido}}<br>
+                           Correo: {{final.correo}}<br>
+                           Naturaleza: {{final.naturaleza}}<br>
+                           Valor: ${{final.valor}}<br>
+                        </p>
+                      </li>   
+                    </ul>  
+                    
+                  </div>
+                </li>
+          </ul>  
+  </div>
+
+   <div id="test3" class="col s12">
+     <ul class="collapsible #a5d6a7 green lighten-3" data-collapsible="expandable" >
+      <span>Selecciona una Naturaleza o tipo de persona:</span>
+              <select class="browser-default" 
+                id="busqueda3"
+                name="busqueda3"
+                #busqueda3Txt="ngModel"
+                [(ngModel)]="busqueda3"
+                required>
+                <option value="" disabled selected>Seleccione una naturaleza</option>
+                <option value="Psicologo">Psicologo</option>
+                <option value="Docente">Docente</option>
+                <option value="Estudiante">Estudiante</option>
+                <option value="Otros">Otros</option>
+              </select>
+
+                <li (click)="listarNaturaleza()">
+                  <div id="listarN" class="collapsible-header #a5d6a7 green lighten-3"><i class="material-icons">supervisor_account</i>
+                    Buscar Naturaleza
+                    
+                    <ul class="collection">
+                      <li *ngFor="let final of pruebasNaturaleza">
+                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                        <h4>Naturaleza: {{final.naturaleza}}</h4>
+                        <p>Nombre completo: {{final.nombre}} {{final.apellido}}<br>
+                           Cedula: {{final.cedula}}<br>
+                           Correo: {{final.correo}}<br>
+                           Valor: ${{final.valor}}<br>
+                        </p>
+                      </li>   
+                    </ul>  
+                    
+                  </div>
+                </li>
+          </ul>  
+  </div>
+
+<div id="test4" class="col s12">
+     <ul class="collapsible #80cbc4 teal lighten-3" data-collapsible="expandable" >
+                <li (click)="listartodo()">
+                  <div id="listarT" class="collapsible-header #80cbc4 teal lighten-3"><i class="material-icons">description</i>
+                    Listar todo
+                    
+                    <ul class="collection">
+                      <li *ngFor="let final of pruebasList">
+                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                        <h4>Nombre completo: {{final.nombre}} {{final.apellido}}</h4>
+                        <p>Cedula: {{final.cedula}}<br>
+                           Correo: {{final.correo}}<br>
+                           Naturaleza: {{final.naturaleza}}<br>
+                           Prueba: {{final.prueba}}<br>
+                           Valor: ${{final.valor}}<br>
+                        </p>
+                      </li>   
+                    </ul>  
+                    
+                  </div>
+                </li>
+          </ul>  
+  </div>
+
+
+
+  <div id="test2" class="col s12"></div>
+  
 
 <div align="center">
   <h1 class="titulo ">Test Psicologico</h1>
